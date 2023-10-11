@@ -1,0 +1,41 @@
+2023/10/11 10:08:23 [INFO][server.go:25] start listen
+2023/10/11 10:09:24 [INFO][server.go:66] new connect
+2023/10/11 10:10:25 [INFO][server.go:66] new connect
+2023/10/11 10:10:46 [INFO][server.go:51] shutting down
+2023/10/11 10:11:38 [INFO][server.go:25] start listen
+2023/10/11 10:11:45 [INFO][server.go:66] new connect
+2023/10/11 10:12:26 [INFO][server.go:66] new connect
+2023/10/11 10:13:31 [INFO][server.go:25] start listen
+2023/10/11 10:13:35 [INFO][server.go:66] new connect
+2023/10/11 10:14:10 [INFO][server.go:25] start listen
+2023/10/11 10:14:36 [INFO][server.go:25] start listen
+2023/10/11 10:14:38 [INFO][server.go:25] start listen
+2023/10/11 10:16:01 [INFO][server.go:25] start listen
+2023/10/11 10:17:01 [INFO][server.go:66] new connect
+2023/10/11 10:17:21 [INFO][server.go:51] shutting down
+2023/10/11 10:17:21 [INFO][echo.go:83] handler shutting down
+2023/10/11 10:17:22 [INFO][server.go:25] start listen
+2023/10/11 10:17:41 [INFO][server.go:66] new connect
+2023/10/11 10:18:01 [INFO][server.go:51] shutting down
+2023/10/11 10:18:02 [INFO][server.go:25] start listen
+2023/10/11 10:18:16 [INFO][server.go:66] new connect
+2023/10/11 10:18:46 [INFO][server.go:25] start listen
+2023/10/11 10:18:49 [INFO][server.go:66] new connect
+2023/10/11 10:21:16 [INFO][server.go:51] shutting down
+2023/10/11 10:27:21 [INFO][server.go:25] start listen
+2023/10/11 10:27:27 [INFO][server.go:66] new connect
+2023/10/11 10:27:55 [INFO][server.go:51] shutting down
+2023/10/11 10:27:58 [INFO][server.go:25] start listen
+2023/10/11 10:28:17 [INFO][server.go:25] start listen
+2023/10/11 10:28:24 [INFO][server.go:66] new connect
+2023/10/11 10:29:19 [WARN][echo.go:69] read tcp 127.0.0.1:6399->127.0.0.1:39481: wsarecv: An existing connection was forcibly closed by the remote host.
+2023/10/11 10:30:02 [INFO][server.go:51] shutting down
+2023/10/11 10:32:19 [INFO][server.go:25] start listen
+2023/10/11 10:32:24 [INFO][server.go:66] new connect
+2023/10/11 10:32:59 [INFO][server.go:25] start listen
+2023/10/11 10:33:09 [INFO][server.go:66] new connect
+2023/10/11 10:34:09 [INFO][server.go:25] start listen
+2023/10/11 10:34:14 [INFO][server.go:66] new connect
+2023/10/11 10:34:45 [WARN][echo.go:66] read tcp 127.0.0.1:6399->127.0.0.1:39644: wsarecv: An existing connection was forcibly closed by the remote host.
+2023/10/11 10:34:53 [INFO][server.go:66] new connect
+2023/10/11 10:36:46 [WARN][echo.go:66] read tcp 127.0.0.1:6399->127.0.0.1:39664: wsarecv: An existing connection was forcibly closed by the remote host.
