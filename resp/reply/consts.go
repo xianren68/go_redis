@@ -1,4 +1,4 @@
-package resp
+package reply
 
 /* 一些固定回复 */
 type PongReply struct {
