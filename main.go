@@ -4,6 +4,7 @@ import (
 	"fmt"
 	"go_redis/config"
 	"go_redis/lib/logger"
+	"go_redis/resp/handler"
 	"go_redis/tcp"
 	"os"
 )
@@ -40,7 +41,7 @@ func main() {
 	}
 
 	// 开启tcp连接
-	echoHandler := tcp.MakeEchoHandler()
+	echoHandler := handler.MakeRespHandler()
 	err := tcp.ListenAndServerWithSignal(&tcp.Config{
 		Address: fmt.Sprintf("%s:%d", config.Properties.Bind, config.Properties.Port),
 	},

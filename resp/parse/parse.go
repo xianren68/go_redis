@@ -179,6 +179,7 @@ func readLine(bufReader *bufio.Reader, state *readState) ([]byte, bool, error) {
 			// 协议错误
 			return nil, false, errors.New("protocol error: " + string(msg))
 		}
+		state.bulkLen = 0
 
 	}
 	return msg, false, nil
@@ -260,6 +261,7 @@ func readBody(msg []byte, state *readState) error {
 func parseBulkHeader(msg []byte, state *readState) error {
 	var err error
 	state.bulkLen, err = strconv.ParseInt(string(msg[1:len(msg)-2]), 10, 64)
+	logger.Info(state.bulkLen)
 	if err != nil {
 		return errors.New("protocol error: " + string(msg))
 	}
