@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"errors"
 	"go_redis/interface/resp"
+	"go_redis/lib/logger"
 	"go_redis/resp/reply"
 	"io"
 	"strconv"
@@ -43,7 +44,110 @@ func ParseStream(reader io.Reader) <-chan *PayLoad {
 	return ch
 }
 func parse0(reader io.Reader, ch chan<- *PayLoad) {
+	// 错误恢复
+	defer func() {
+		if err := recover(); err != nil {
+			logger.Warn(err)
+		}
+	}()
+	bufReader := bufio.NewReader(reader)
+	var state readState
+	var err error
+	var msg []byte
+	for {
+		var ioErr bool
+		msg, ioErr, err = readLine(bufReader, &state)
+		if err != nil {
+			if ioErr {
+				ch <- &PayLoad{
+					Err: err,
+				}
+				// 关闭channel
+				close(ch)
+				return
+			} else {
+				ch <- &PayLoad{
+					Err: err,
+				}
+				// 重置状态(忽略错误的命令)
+				state = readState{}
+				continue
+			}
 
+		}
+		// 判断是否在多行解析模式
+		if state.readingMultiLine {
+			err = readBody(msg, &state)
+			if err != nil {
+				ch <- &PayLoad{
+					Err: err,
+				}
+				state = readState{}
+				continue
+			}
+			// 如果解析到了末尾
+			if state.isFinish() {
+				var result resp.Reply
+				if state.msgType == '*' {
+					result = reply.MakeMultiBulkReply(state.args)
+				} else {
+					result = reply.MakeBulkReply(state.args[0])
+				}
+				ch <- &PayLoad{Data: result}
+				state = readState{}
+				continue
+			}
+
+		} else {
+			// 不是多行解析
+			if msg[0] == '*' {
+				err = parseMultiBulkHeader(msg, &state)
+				if err != nil {
+					ch <- &PayLoad{
+						Err: err,
+					}
+					state = readState{}
+					continue
+				}
+				// 多行的行数为0
+				if state.exceptedArgsCount == 0 {
+					ch <- &PayLoad{
+						Data: reply.MakeNullBulkBytes(),
+					}
+					state = readState{}
+					continue
+				}
+
+			} else if msg[0] == '$' {
+				err = parseBulkHeader(msg, &state)
+				if err != nil {
+					ch <- &PayLoad{
+						Err: err,
+					}
+					state = readState{}
+					continue
+				}
+				if state.bulkLen == -1 {
+					ch <- &PayLoad{
+						Data: reply.MakeNullBulkBytes(),
+					}
+					state = readState{}
+					continue
+				}
+			} else {
+				// 信号指令
+				var result resp.Reply
+				result, err = parseSingle(msg)
+				ch <- &PayLoad{
+					result, err,
+				}
+				state = readState{}
+				continue
+			}
+
+		}
+
+	}
 }
 
 // 读取一行
@@ -97,7 +201,7 @@ func parseMultiBulkHeader(msg []byte, state *readState) error {
 		// 初始化state
 		state.exceptedArgsCount = int(expectedLine)
 		state.readingMultiLine = true
-		state.args = make([][]byte, state.exceptedArgsCount)
+		state.args = make([][]byte, 0, state.exceptedArgsCount)
 		state.msgType = msg[0]
 	} else {
 		return errors.New("protocol error: " + string(msg))
@@ -123,4 +227,52 @@ func parseSingle(msg []byte) (resp.Reply, error) {
 		result = reply.MakeIntReply(int64(val))
 	}
 	return result, nil
+}
+
+// 读取主体信息
+func readBody(msg []byte, state *readState) error {
+	// 去除最后的\r\n
+	line := msg[:len(msg)-2]
+	var err error
+	// 判断是什么开头的
+	if line[0] == '$' {
+		// eg $8\r\n
+		// 获取下一个要读取字符的长度
+		state.bulkLen, err = strconv.ParseInt(string(line[1:]), 10, 64)
+		if err != nil {
+			// 协议错误
+			return errors.New("protocol error: " + string(msg))
+		}
+		if state.bulkLen <= 0 {
+			// 塞入一个空的字符序列
+			state.args = append(state.args, []byte{})
+			state.bulkLen = 0
+		}
+
+	} else {
+		// 正常字符串 eg:set\r\n
+		state.args = append(state.args, line)
+	}
+	return nil
+}
+
+// 读取$后的数字
+func parseBulkHeader(msg []byte, state *readState) error {
+	var err error
+	state.bulkLen, err = strconv.ParseInt(string(msg[1:len(msg)-2]), 10, 64)
+	if err != nil {
+		return errors.New("protocol error: " + string(msg))
+	}
+	if state.bulkLen == -1 {
+		return nil
+	} else if state.bulkLen > 0 {
+		state.msgType = '$'
+		state.readingMultiLine = true
+		state.exceptedArgsCount = 1
+		state.args = make([][]byte, 0, 1)
+		return nil
+	} else {
+		return errors.New("protocol error: " + string(msg))
+	}
+
 }
