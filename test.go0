@@ -1,0 +1,20 @@
+package main
+
+import (
+	"fmt"
+	"io"
+	"net"
+	"os"
+)
+
+func main() {
+	cmd := []byte("*3\r\n$3\r\nset\r\n$3\r\nkey\r\n$5\r\nvalue\r\n")
+	dial, err := net.Dial("tcp", ":6399")
+	if err != nil {
+		fmt.Println(err)
+		return
+	}
+	dial.Write(cmd)
+	io.Copy(os.Stdout, dial)
+
+}

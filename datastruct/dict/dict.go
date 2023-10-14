@@ -1,6 +1,6 @@
 package dict
 
-type Consumer func(string, any) bool
+type Consumer func(any, any) bool
 type Dict interface {
 	Get(string) (any, bool)
 	Len() int

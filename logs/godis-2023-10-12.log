@@ -1,0 +1,241 @@
+2023/10/12 15:19:33 [INFO][server.go:25] start listen
+2023/10/12 15:21:13 [INFO][server.go:66] new connect
+2023/10/12 15:23:39 [INFO][server.go:51] shutting down
+2023/10/12 15:23:40 [INFO][server.go:25] start listen
+2023/10/12 15:23:57 [INFO][server.go:66] new connect
+2023/10/12 15:24:31 [INFO][server.go:25] start listen
+2023/10/12 15:25:50 [INFO][server.go:66] new connect
+2023/10/12 15:26:48 [INFO][handler.go:55] connection closed127.0.0.1:36082
+2023/10/12 15:27:53 [INFO][server.go:25] start listen
+2023/10/12 15:27:57 [INFO][server.go:66] new connect
+2023/10/12 15:27:57 [INFO][parse.go:47] xxxxxxxxx
+2023/10/12 15:29:30 [INFO][server.go:51] shutting down
+2023/10/12 15:29:33 [INFO][server.go:25] start listen
+2023/10/12 15:29:36 [INFO][server.go:66] new connect
+2023/10/12 15:29:36 [INFO][parse.go:47] xxxxxxxxx
+2023/10/12 15:30:42 [INFO][server.go:25] start listen
+2023/10/12 15:31:11 [INFO][server.go:66] new connect
+2023/10/12 15:31:18 [INFO][server.go:25] start listen
+2023/10/12 15:31:56 [INFO][server.go:66] new connect
+2023/10/12 15:32:10 [INFO][server.go:25] start listen
+2023/10/12 15:34:28 [INFO][server.go:66] new connect
+2023/10/12 15:34:30 [INFO][server.go:51] shutting down
+2023/10/12 15:34:48 [INFO][server.go:25] start listen
+2023/10/12 15:35:02 [INFO][server.go:66] new connect
+2023/10/12 15:35:37 [INFO][server.go:25] start listen
+2023/10/12 15:35:44 [INFO][server.go:66] new connect
+2023/10/12 15:36:29 [INFO][server.go:51] shutting down
+2023/10/12 15:36:32 [INFO][server.go:25] start listen
+2023/10/12 15:36:35 [INFO][server.go:66] new connect
+2023/10/12 15:36:59 [INFO][server.go:25] start listen
+2023/10/12 15:37:01 [INFO][server.go:66] new connect
+2023/10/12 15:37:22 [INFO][parse.go:161] [42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110 42 50 92 114 92 110 36 51 92 114 92 110 115 101 116 92 114 92 110 36 51 92 114 92 110 107 101 121 92 114 92 110] 2222 read tcp 127.0.0.1:6399->127.0.0.1:36572: wsarecv: An existing connection was forcibly closed by the remote host.
+2023/10/12 15:37:22 [INFO][parse.go:60] []
+2023/10/12 15:37:22 [INFO][handler.go:55] connection closed127.0.0.1:36572
+2023/10/12 15:37:22 [INFO][server.go:66] new connect
+2023/10/12 15:37:53 [INFO][server.go:51] shutting down
+2023/10/12 15:37:55 [INFO][server.go:25] start listen
+2023/10/12 15:37:57 [INFO][server.go:66] new connect
+2023/10/12 15:37:57 [INFO][parse.go:156] readLine
+2023/10/12 15:38:45 [INFO][server.go:51] shutting down
+2023/10/12 15:38:47 [INFO][server.go:25] start listen
+2023/10/12 15:38:50 [INFO][server.go:66] new connect
+2023/10/12 15:38:50 [INFO][parse.go:158] 0
+2023/10/12 15:39:13 [INFO][parse.go:162] [49 50 51 52 49 50 51 52 10] 2222 <nil>
+2023/10/12 15:39:13 [INFO][parse.go:60] []
+2023/10/12 15:39:13 [INFO][parse.go:158] 0
+2023/10/12 15:39:33 [INFO][server.go:25] start listen
+2023/10/12 15:40:14 [INFO][server.go:66] new connect
+2023/10/12 15:40:14 [INFO][parse.go:158] 0
+2023/10/12 15:40:16 [INFO][parse.go:162] [42 50 10] 2222 <nil>
+2023/10/12 15:40:16 [INFO][parse.go:60] []
+2023/10/12 15:40:16 [INFO][parse.go:158] 0
+2023/10/12 15:40:16 [INFO][parse.go:162] [36 51 10] 2222 <nil>
+2023/10/12 15:40:16 [INFO][parse.go:60] []
+2023/10/12 15:40:16 [INFO][parse.go:158] 0
+2023/10/12 15:40:16 [INFO][parse.go:162] [75 101 121 10] 2222 <nil>
+2023/10/12 15:40:16 [INFO][parse.go:60] []
+2023/10/12 15:40:16 [INFO][parse.go:158] 0
+2023/10/12 15:40:16 [INFO][parse.go:162] [36 51 10] 2222 <nil>
+2023/10/12 15:40:16 [INFO][parse.go:60] []
+2023/10/12 15:40:16 [INFO][parse.go:158] 0
+2023/10/12 15:40:16 [INFO][parse.go:162] [83 101 116 10] 2222 <nil>
+2023/10/12 15:40:16 [INFO][parse.go:60] []
+2023/10/12 15:40:16 [INFO][parse.go:158] 0
+2023/10/12 15:40:16 [INFO][parse.go:162] [10] 2222 <nil>
+2023/10/12 15:40:16 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 15:44:05 [INFO][server.go:66] new connect
+2023/10/12 15:44:05 [INFO][parse.go:158] 0
+2023/10/12 15:44:09 [INFO][parse.go:162] [36 50 10] 2222 <nil>
+2023/10/12 15:44:09 [INFO][parse.go:60] []
+2023/10/12 15:44:09 [INFO][parse.go:158] 0
+2023/10/12 15:44:09 [INFO][parse.go:162] [49 50 10] 2222 <nil>
+2023/10/12 15:44:09 [INFO][parse.go:60] []
+2023/10/12 15:44:09 [INFO][parse.go:158] 0
+2023/10/12 15:44:09 [INFO][parse.go:162] [10] 2222 <nil>
+2023/10/12 15:44:09 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 15:45:13 [INFO][server.go:51] shutting down
+2023/10/12 15:45:14 [INFO][server.go:25] start listen
+2023/10/12 15:45:19 [INFO][server.go:66] new connect
+2023/10/12 15:45:20 [INFO][parse.go:60] []
+2023/10/12 15:45:20 [INFO][parse.go:60] []
+2023/10/12 15:45:20 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 15:46:27 [INFO][server.go:25] start listen
+2023/10/12 15:46:35 [INFO][server.go:66] new connect
+2023/10/12 15:46:44 [INFO][parse.go:161] [36 50 10] 3
+2023/10/12 15:46:44 [INFO][parse.go:60] []
+2023/10/12 15:46:44 [INFO][parse.go:161] [10] 1
+2023/10/12 15:46:44 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 15:48:58 [INFO][server.go:25] start listen
+2023/10/12 15:49:02 [INFO][server.go:66] new connect
+2023/10/12 15:49:04 [INFO][parse.go:161] $2
+ 3
+2023/10/12 15:49:04 [INFO][parse.go:60] []
+2023/10/12 15:49:04 [INFO][parse.go:161] 
+ 1
+2023/10/12 15:49:04 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 15:49:35 [INFO][server.go:51] shutting down
+2023/10/12 15:53:17 [INFO][server.go:25] start listen
+2023/10/12 15:53:20 [INFO][server.go:66] new connect
+2023/10/12 15:53:22 [INFO][parse.go:161] $2
+ 3
+2023/10/12 15:53:22 [INFO][parse.go:60] []
+2023/10/12 15:53:22 [INFO][parse.go:161] 
+ 1
+2023/10/12 15:53:22 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 16:05:08 [INFO][server.go:25] start listen
+2023/10/12 16:05:15 [INFO][server.go:66] new connect
+2023/10/12 16:05:17 [INFO][parse.go:60] [] protocol error: $2
+
+2023/10/12 16:05:17 [INFO][parse.go:61] []
+2023/10/12 16:05:17 [INFO][parse.go:60] [] protocol error: key
+
+2023/10/12 16:05:17 [INFO][parse.go:61] []
+2023/10/12 16:05:17 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 16:06:41 [INFO][server.go:66] new connect
+2023/10/12 16:06:43 [INFO][parse.go:60] [] protocol error: $2
+
+2023/10/12 16:06:43 [INFO][parse.go:61] []
+2023/10/12 16:06:43 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 16:07:10 [INFO][server.go:25] start listen
+2023/10/12 16:07:13 [INFO][server.go:66] new connect
+2023/10/12 16:07:14 [INFO][parse.go:60] [] ,,protocol error: $2
+
+2023/10/12 16:07:14 [INFO][parse.go:61] []
+2023/10/12 16:07:14 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 16:08:56 [INFO][server.go:25] start listen
+2023/10/12 16:08:58 [INFO][server.go:66] new connect
+2023/10/12 16:12:34 [INFO][server.go:25] start listen
+2023/10/12 16:12:37 [INFO][server.go:66] new connect
+2023/10/12 16:13:12 [INFO][server.go:25] start listen
+2023/10/12 16:13:17 [INFO][server.go:66] new connect
+2023/10/12 16:13:27 [INFO][parse.go:160] [49 50 51 49 50 51 49 50 51 10] <nil>
+2023/10/12 16:13:59 [INFO][parse.go:160] [58 49 50 51 10] <nil>
+2023/10/12 16:15:02 [INFO][parse.go:160] [58 49 50 51 92 114 92 110 10] <nil>
+2023/10/12 16:16:40 [INFO][parse.go:160] [] read tcp 127.0.0.1:6399->127.0.0.1:39920: wsarecv: An existing connection was forcibly closed by the remote host.
+2023/10/12 16:16:40 [INFO][handler.go:55] connection closed127.0.0.1:39920
+2023/10/12 16:40:29 [INFO][server.go:25] start listen
+2023/10/12 16:41:10 [INFO][server.go:66] new connect
+2023/10/12 16:41:19 [INFO][parse.go:160] [36 50 10] <nil>
+2023/10/12 16:42:33 [INFO][server.go:25] start listen
+2023/10/12 16:42:38 [INFO][server.go:66] new connect
+2023/10/12 16:42:40 [INFO][parse.go:160] [36 51 10] <nil>
+2023/10/12 16:42:40 [INFO][parse.go:160] [10] <nil>
+2023/10/12 16:42:40 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 16:43:05 [INFO][server.go:66] new connect
+2023/10/12 16:43:14 [INFO][parse.go:160] [36 50 10] <nil>
+2023/10/12 16:43:14 [INFO][parse.go:160] [10] <nil>
+2023/10/12 16:43:14 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 16:43:43 [INFO][server.go:66] new connect
+2023/10/12 16:43:48 [INFO][parse.go:160] [36 50 48 10] <nil>
+2023/10/12 16:43:48 [INFO][parse.go:160] [10] <nil>
+2023/10/12 16:43:48 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 19:07:53 [INFO][server.go:25] start listen
+2023/10/12 19:12:16 [INFO][server.go:66] new connect
+2023/10/12 19:13:30 [INFO][handler.go:55] connection closed127.0.0.1:45614
+2023/10/12 19:13:45 [INFO][server.go:66] new connect
+2023/10/12 19:13:45 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:14:22 [INFO][handler.go:55] connection closed127.0.0.1:45687
+2023/10/12 19:14:27 [INFO][server.go:66] new connect
+2023/10/12 19:14:27 [INFO][parse.go:263] 3
+2023/10/12 19:14:27 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:15:33 [INFO][handler.go:55] connection closed127.0.0.1:45722
+2023/10/12 19:15:39 [INFO][server.go:66] new connect
+2023/10/12 19:15:39 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:15:39 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:16:01 [INFO][handler.go:55] connection closed127.0.0.1:45757
+2023/10/12 19:16:06 [INFO][server.go:66] new connect
+2023/10/12 19:16:06 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 19:17:58 [INFO][server.go:66] new connect
+2023/10/12 19:17:58 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:21:19 [INFO][server.go:25] start listen
+2023/10/12 19:21:26 [INFO][server.go:66] new connect
+2023/10/12 19:21:26 [INFO][parse.go:141] :123
+ [58 49 50 51 13 10]
+2023/10/12 19:21:26 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:22:31 [INFO][server.go:25] start listen
+2023/10/12 19:22:33 [INFO][server.go:66] new connect
+2023/10/12 19:22:33 [INFO][parse.go:141] :123
+ :123
+
+2023/10/12 19:22:33 [WARN][handler.go:63] require multiBulk reply
+2023/10/12 19:25:40 [INFO][handler.go:55] connection closed127.0.0.1:46046
+2023/10/12 19:25:44 [INFO][server.go:66] new connect
+2023/10/12 19:25:44 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 19:26:42 [INFO][server.go:25] start listen
+2023/10/12 19:26:46 [INFO][server.go:66] new connect
+2023/10/12 19:26:46 [INFO][parse.go:60] *2
+
+2023/10/12 19:26:46 [INFO][parse.go:60] $1
+
+2023/10/12 19:26:46 [INFO][parse.go:60] k
+
+2023/10/12 19:26:46 [INFO][parse.go:60] 
+2023/10/12 19:26:46 [WARN][parse.go:50] runtime error: index out of range [-1]
+2023/10/12 19:28:08 [INFO][server.go:25] start listen
+2023/10/12 19:28:11 [INFO][server.go:66] new connect
+2023/10/12 19:28:11 [INFO][parse.go:61] *2
+
+2023/10/12 19:28:11 [INFO][parse.go:61] $1
+
+2023/10/12 19:28:11 [INFO][parse.go:61] k
+
+2023/10/12 19:28:11 [INFO][parse.go:61] 
+2023/10/12 19:28:11 [WARN][parse.go:51] runtime error: index out of range [-1]
+2023/10/12 19:30:00 [INFO][server.go:25] start listen
+2023/10/12 19:30:03 [INFO][server.go:66] new connect
+2023/10/12 19:30:03 [INFO][parse.go:61] *2
+
+2023/10/12 19:30:03 [INFO][parse.go:61] $1
+
+2023/10/12 19:30:03 [INFO][parse.go:61] k
+
+2023/10/12 19:30:03 [INFO][parse.go:61] 
+2023/10/12 19:30:03 [WARN][parse.go:51] runtime error: index out of range [-1]
+2023/10/12 19:30:27 [INFO][server.go:25] start listen
+2023/10/12 19:30:32 [INFO][server.go:66] new connect
+2023/10/12 19:30:32 [INFO][parse.go:61] *2
+
+2023/10/12 19:30:32 [INFO][parse.go:61] $1
+
+2023/10/12 19:30:32 [INFO][parse.go:61] k
+
+2023/10/12 19:30:32 [INFO][parse.go:61] 
+2023/10/12 19:30:32 [WARN][parse.go:51] runtime error: index out of range [-1]
+2023/10/12 19:31:04 [INFO][server.go:25] start listen
+2023/10/12 19:31:08 [INFO][server.go:66] new connect
+2023/10/12 19:31:08 [WARN][parse.go:51] runtime error: index out of range [-1]
+2023/10/12 19:32:18 [INFO][server.go:25] start listen
+2023/10/12 19:32:22 [INFO][server.go:66] new connect
+2023/10/12 19:32:22 [WARN][parse.go:51] runtime error: index out of range [-1]
+2023/10/12 19:34:01 [INFO][server.go:25] start listen
+2023/10/12 19:34:05 [INFO][server.go:66] new connect
+2023/10/12 19:35:44 [INFO][handler.go:55] connection closed127.0.0.1:46534
+2023/10/12 19:36:46 [INFO][server.go:25] start listen
+2023/10/12 19:36:54 [INFO][server.go:66] new connect
+2023/10/12 19:37:51 [INFO][handler.go:55] connection closed127.0.0.1:46749
+2023/10/12 19:37:55 [INFO][server.go:66] new connect
+2023/10/12 19:39:09 [INFO][server.go:25] start listen
+2023/10/12 19:39:12 [INFO][server.go:66] new connect
+2023/10/12 19:40:15 [INFO][server.go:25] start listen
+2023/10/12 19:40:17 [INFO][server.go:66] new connect

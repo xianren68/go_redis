@@ -1,11 +1,18 @@
 package dict
 
-import "sync"
+import (
+	"sync"
+)
 
 type SyncDict struct {
 	m sync.Map
 }
 
+func MakeSyncDict() *SyncDict {
+	return &SyncDict{
+		m: sync.Map{},
+	}
+}
 func (s *SyncDict) Get(a string) (any, bool) {
 	return s.m.Load(a)
 }
@@ -56,26 +63,44 @@ func (s *SyncDict) Remove(s2 string) int {
 }
 
 func (s *SyncDict) ForEach(consumer Consumer) {
-	//TODO implement me
-	panic("implement me")
+	s.m.Range(consumer)
 }
 
 func (s *SyncDict) Keys() []string {
-	//TODO implement me
-	panic("implement me")
+	l := s.Len()
+	res := make([]string, 0, l)
+	s.m.Range(func(key, value any) bool {
+		res = append(res, key.(string))
+		return true
+	})
+	return res
 }
 
-func (s *SyncDict) RandomKeys(i int) []string {
-	//TODO implement me
-	panic("implement me")
+func (s *SyncDict) RandomKeys(limit int) []string {
+	res := make([]string, limit)
+	for i := 0; i < limit; i++ {
+		s.m.Range(func(key, value any) bool {
+			res[i] = key.(string)
+			return false
+		})
+	}
+	return res
 }
 
-func (s *SyncDict) RandomDistinctKeys(i int) []string {
-	//TODO implement me
-	panic("implement me")
+func (s *SyncDict) RandomDistinctKeys(limit int) []string {
+	res := make([]string, limit)
+	i := 0
+	s.m.Range(func(key, value any) bool {
+		if i == limit {
+			return false
+		}
+		res[i] = key.(string)
+		i++
+		return true
+	})
+	return res
 }
 
 func (s *SyncDict) Clear() {
-	//TODO implement me
-	panic("implement me")
+	s.m = sync.Map{}
 }
