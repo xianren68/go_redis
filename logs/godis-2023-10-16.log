@@ -1,0 +1,15 @@
+2023/10/16 20:24:25 [INFO][server.go:25] start listen
+2023/10/16 20:25:42 [INFO][server.go:66] new connect
+2023/10/16 20:26:08 [INFO][parse.go:264] 0
+2023/10/16 20:27:06 [INFO][parse.go:264] 3
+2023/10/16 20:27:06 [WARN][handler.go:63] require multiBulk reply
+2023/10/16 20:27:06 [INFO][parse.go:264] 5
+2023/10/16 20:27:06 [WARN][handler.go:63] require multiBulk reply
+2023/10/16 20:28:25 [INFO][parse.go:264] 3
+2023/10/16 20:28:25 [WARN][handler.go:63] require multiBulk reply
+2023/10/16 20:28:48 [WARN][handler.go:63] require multiBulk reply
+2023/10/16 20:30:59 [WARN][handler.go:63] require multiBulk reply
+2023/10/16 20:30:59 [INFO][parse.go:264] 3
+2023/10/16 20:30:59 [INFO][parse.go:264] 4
+2023/10/16 20:30:59 [WARN][handler.go:63] require multiBulk reply
+2023/10/16 20:30:59 [WARN][handler.go:63] require multiBulk reply

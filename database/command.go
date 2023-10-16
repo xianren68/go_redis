@@ -1,5 +1,7 @@
 package database
 
+import "strings"
+
 // 所有的指令列表
 var cmdTable = map[string]*command{}
 
@@ -13,6 +15,7 @@ type command struct {
 
 // RegisterCmd 注册数据库指令
 func RegisterCmd(name string, executor ExecFunc, arity int) {
+	name = strings.ToLower(name)
 	cmd := &command{executor, arity}
 	cmdTable[name] = cmd
 }

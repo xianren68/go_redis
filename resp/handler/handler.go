@@ -25,7 +25,7 @@ type RespHandler struct {
 
 func MakeRespHandler() *RespHandler {
 	var db databaseface.Database
-	db = database.NewEchoDatabase()
+	db = database.NewDataBase()
 	return &RespHandler{
 		db: db,
 	}

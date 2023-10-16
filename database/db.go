@@ -89,11 +89,11 @@ func (db *DB) Remove(key string) int {
 
 // Removes 删除多个
 func (db *DB) Removes(keys ...string) int {
-	delete := 0
+	deleted := 0
 	for i := 0; i < len(keys); i++ {
-		delete += db.Removes(keys[i])
+		deleted += db.Removes(keys[i])
 	}
-	return delete
+	return deleted
 }
 
 // Flush 清空数据库
